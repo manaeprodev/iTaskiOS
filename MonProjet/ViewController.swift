@@ -10,7 +10,9 @@ import Firebase
 
 class ViewController: UIViewController {
     
+    
     @IBOutlet weak var emailTextField: UITextField!
+    
     @IBOutlet weak var pwdTextField: UITextField!
     
     override func viewDidLoad() {
@@ -18,8 +20,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func onClickGetStarted(_ sender: UIButton) {
-        guard let email = emailTextField.text, let password = pwdTextField.text else {
-            // Gérer le cas où l'email ou le mdp est vide
+        guard let email = emailTextField.text else {
+            return
+        }
+        guard let password = pwdTextField.text else {
             return
         }
         
@@ -31,10 +35,6 @@ class ViewController: UIViewController {
                 self.present(alert, animated: true, completion: nil)
             } else {
                 print("L'utilisateur est connecté!")
-                let tasksPage = UIStoryboard(name: "Main", bundle: nil)
-                if let tasksPageViewController = self.storyboard?.instantiateViewController(withIdentifier: "TasksPageViewController") {
-                    self.navigationController?.pushViewController(tasksPageViewController, animated: true)
-                }
             }
         }
     }
