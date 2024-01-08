@@ -46,6 +46,10 @@ class ListsController: UIViewController {
                                     nameLabel.clipsToBounds = true
                                     nameLabel.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
 
+                                    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.labelTapped(_:)))
+                                    nameLabel.isUserInteractionEnabled = true
+                                    nameLabel.addGestureRecognizer(tapGesture)
+                                    
                                     self.monStackView.addArrangedSubview(nameLabel)
                                     
                                 }
@@ -61,4 +65,18 @@ class ListsController: UIViewController {
         
     }
 
+    @objc func labelTapped(_ sender: UITapGestureRecognizer) {
+        if let tappedLabel = sender.view as? UILabel {
+            if let labelName = tappedLabel.text {
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                
+                if let destinationVC = storyboard.instantiateViewController(withIdentifier: "ViewListController") as? ViewListController {
+                    destinationVC.labelName = labelName
+                    
+                    present(destinationVC, animated: true, completion: nil)
+                }
+            }
+        }
+    }
 }
