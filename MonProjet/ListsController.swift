@@ -17,8 +17,11 @@ class ListsController: UIViewController {
     
     @IBOutlet weak var currentUser: UILabel!
     
+    @IBOutlet weak var disconnectButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        disconnectButton.addTarget(self, action: #selector(disconnect), for: .touchUpInside)
         
         if let currentUser = Auth.auth().currentUser {
             let email = currentUser.email
@@ -77,6 +80,16 @@ class ListsController: UIViewController {
                     present(destinationVC, animated: true, completion: nil)
                 }
             }
+        }
+    }
+    
+    @objc func disconnect() {
+        do {
+            try Auth.auth().signOut()
+            
+            print("Déconnexion réussie")
+        } catch let signOutError as NSError {
+            print("Erreur : %@", signOutError)
         }
     }
 }

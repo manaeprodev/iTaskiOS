@@ -47,7 +47,7 @@
 		EC80ECA42AE15C5900471208 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = EC80ECA32AE15C5900471208 /* FirebaseStorageCombine-Community */; };
 		EC80ECA62AE15C8400471208 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC80ECA52AE15C8400471208 /* GoogleService-Info.plist */; };
 		EC9D46752B4C2FE9009AB28C /* ViewListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D46742B4C2FE9009AB28C /* ViewListController.swift */; };
-		EC9D46772B4C5842009AB28C /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D46762B4C5842009AB28C /* TrainingViewController.swift */; };
+		ECA278AA2B5031F200E6A1AA /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA278A92B5031F200E6A1AA /* TrainingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +85,7 @@
 		EC80EBB92AE13B0E00471208 /* MonProjetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonProjetUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EC80ECA52AE15C8400471208 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EC9D46742B4C2FE9009AB28C /* ViewListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewListController.swift; sourceTree = "<group>"; };
-		EC9D46762B4C5842009AB28C /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
+		ECA278A92B5031F200E6A1AA /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,7 +174,7 @@
 				EC36079E2B2868A5004CD92D /* ListsController.swift */,
 				EC3607A02B2878E0004CD92D /* NewListController.swift */,
 				EC9D46742B4C2FE9009AB28C /* ViewListController.swift */,
-				EC9D46762B4C5842009AB28C /* TrainingViewController.swift */,
+				ECA278A92B5031F200E6A1AA /* TrainingViewController.swift */,
 			);
 			path = MonProjet;
 			sourceTree = "<group>";
@@ -363,7 +363,7 @@
 				EC9D46752B4C2FE9009AB28C /* ViewListController.swift in Sources */,
 				EC80EB9B2AE13B0D00471208 /* ViewController.swift in Sources */,
 				EC80EB972AE13B0D00471208 /* AppDelegate.swift in Sources */,
-				EC9D46772B4C5842009AB28C /* TrainingViewController.swift in Sources */,
+				ECA278AA2B5031F200E6A1AA /* TrainingViewController.swift in Sources */,
 				EC80EB992AE13B0D00471208 /* SceneDelegate.swift in Sources */,
 				EC3607A12B2878E0004CD92D /* NewListController.swift in Sources */,
 				EC36079F2B2868A5004CD92D /* ListsController.swift in Sources */,

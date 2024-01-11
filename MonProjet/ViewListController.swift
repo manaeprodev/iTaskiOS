@@ -18,7 +18,10 @@ class ViewListController: UIViewController {
     
     @IBOutlet weak var trainButton: UIButton!
     
+    @IBOutlet weak var trainLabel: UILabel!
+    
     var labelName: String?
+    var data: [String: String]?
     
     let db = Firestore.firestore()
     
@@ -28,7 +31,7 @@ class ViewListController: UIViewController {
     
         super.viewDidLoad()
         
-        trainButton.addTarget(self, action: #selector(trainButtonTapped), for: .touchUpInside)
+//        trainButton.addTarget(self, action: #selector(trainButtonTapped), for: .touchUpInside)
         
         if let currentUser = Auth.auth().currentUser {
                        let email = currentUser.email
@@ -60,19 +63,16 @@ class ViewListController: UIViewController {
             }
         }
     }
-    @objc func trainButtonTapped() {
-        let alertController = UIAlertController(title: "Ready?", message: "Challange yourself and go for this list?", preferredStyle: .alert)
-        
-        let yesAction = UIAlertAction(title: "Yes", style: .default) {_ in
-            print("Yes")
-        }
-        alertController.addAction(yesAction)
-        
-        let noAction = UIAlertAction(title: "No", style: .cancel) {_ in
-            print("No")
-        }
-        alertController.addAction(noAction)
-        
-        present(alertController, animated:true, completion: nil)
-    }
+    
+//    @objc func trainButtonTapped() {
+//        let storyboard = UIStoryboard(name:"Main", bundle: nil)
+//
+//        if let destinationTrainingVC =  storyboard.instantiateViewController(withIdentifier: "TrainingViewController") as? TrainingViewController {
+////
+////            destinationTrainingVC.labelName = labelName
+////            destinationTrainingVC.data = self.data
+////
+//            present(destinationTrainingVC, animated: true, completion: nil)
+//        }
+//    }
 }
